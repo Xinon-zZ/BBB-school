@@ -17,6 +17,7 @@ a {
 
 img {
     max-width: 100%;
+    vertical-align: bottom;
 }
 
 li {
@@ -27,12 +28,16 @@ HEADER
 ------------------------------------*/
 #header {
     height: 100px;
+    padding: 40px 0 0 50px;
 }
 
 .site-title {
     width: 100px;
-    margin-top: 40px;
-    margin-left: 50px;
+    line-height: 1px;
+}
+
+.site-title a {
+    display: block;
 }
 
 /* --クリック時に表示するメニュー-- */
@@ -44,16 +49,16 @@ HEADER
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 20px;
-    opacity: 0;
+    z-index: 20;
+    opacity: 1;
     text-align: center;
     transition: opacity 0.6s ease, visibility 0.6s ease;
-    visibility: hidden;
+    visibility: visible;
 }
 
 #navi.active {
-    opacity: 1;
-    visibility: visible;
+    opacity: 0;
+    visibility: hidden;
 }
 
 #navi .logo {
@@ -154,13 +159,174 @@ HEADER
     top: 50%;
     transform: translate(-50%,-50%)rotate(45deg);
 }
+/*----------------------------------
+MAINVISUAL
+------------------------------------*/
+#mainvisual {
+    height: 720px;
+    position: relative;
+    margin-bottom: 120px;
+}
+
+/* --テキスト-- */
+.text {
+    position: absolute;
+    top: 280px;
+    left: 10%;
+    z-index: 10;
+}
+.title {
+    font-size: 46px;
+    font-weight: bold;
+    text-shadow: 0 4px 6px#fff;
+    margin-bottom: 30px;
+}
+
+/* --ボタン-- */
+.text .btn {
+    display: block;
+    background-color: #ff2a2a;
+    border-radius: 10px;
+    border-bottom: 6px solid #8d0c0c;
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+    padding: 15px 35px;
+    position: relative;
+    transition: .3s;
+}
+
+.text .btn:hover {
+    opacity: .8;
+    transform: scale(1.05);
+}
+
+/* --ボタンの中の矢印-- */
+.text .btn::after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-right: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    position: absolute;
+    top: 27px;
+    right: 30px;
+    transform: rotate(-45deg);
+}
+
+/* --フェード画像-- */
+.fade li{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 75%;
+    opacity: 0;
+    animation: fade 15s infinite;
+}
+
+/*-- 1枚目の画像アニメーション-- */
+.fade li:first-child {
+    animation-delay: 0s;
+}
+
+/*-- 2枚目の画像アニメーション-- */
+.fade li:nth-child(2) {
+    animation-delay: 5s;
+}
+
+/*-- 3枚目の画像アニメーション-- */
+.fade li:last-child {
+    animation-delay: 10s;
+}
+
+.fade img {
+    width: 100%;
+    height: 720px;
+    object-fit: cover;
+}
+
+.fade li::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: inset 0px 0px 20px 20px #fff;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    15% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 1;
+    }
+    45% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------------------
+レスポンシブ
+---------------------------------------------------------*/
+@media (max-width: 600px) {
 
 /*----------------------------------
-レスポンシブ
+HEADER
 ------------------------------------*/
-@media screen and {
-    
-}
-#header {
-    padding: 25px 0 0 25px;
+    #header {
+        padding: 25px 0 0 25px;
+    }
+/* --メニューボタン-- */
+    .menuBtn {
+        width: 75px;
+        height: 75px;
+    }
+
+    .menuBtn i {
+        width: 35px;
+        height: 1.5px;
+    }
+/* --クリック時に表示するメニュー-- */
+    #navi .logo {
+        top: 25px;
+        left: 25px;
+    }
+
+    .menu {
+        margin-top: 110px;
+    }
+
+    #navi .btn::after {
+        padding: 28px 0;
+    }
+
+/*----------------------------------
+MAINVISUAL
+------------------------------------*/
+/* --テキスト-- */
+
+
 }

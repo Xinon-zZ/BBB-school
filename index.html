@@ -12,7 +12,7 @@
 <body>
     <header id="header">
         <h1 class="site-title"><a href="#"><img src="./img/logo-r.svg" alt="BBB英会話スクール"></a></h1>
-        <nav id="navi" class="active">
+        <nav id="navi" class="active" onclick="toggle()">
             <img class="logo" src="./img/logo-w.svg" alt="英会話スクール">
             <ul class="menu">
                 <li><a href="#">BBBが選ばれる理由</a></li>
@@ -21,7 +21,7 @@
             </ul>
             <a href="#" class="btn">無料体験に申し込む</a>
         </nav>
-        <div class="menuBtn open" onclick="toggle()">
+        <div class="menuBtn" onclick="toggle()">
             <i></i>
             <i></i>
             <i></i>
@@ -29,18 +29,19 @@
     </header>
 
     <main>
+        <!-- メインビジュアル -->
         <div id="mainvisual">
-            <div class="text-area">
-                <p>
+            <div class="text">
+                <p class="title">
                     話して学ぼう！<br>
                     BBB英会話スクール
                 </p>
-                <a href="#">無料体験はこちら</a>
+                <a href="#" class="btn">無料体験はこちら</a>
             </div>
-            <ul>
-                <li><img src="./img/mainvisual1.jpg" alt=""></li>
-                <li><img src="./img/mainvisual2.jpg" alt=""></li>
-                <li><img src="./img/mainvisual3.jpg" alt=""></li>
+            <ul class="fade">
+                <li><img src="./img/mainvisual1.jpg" alt="写真１"></li>
+                <li><img src="./img/mainvisual2.jpg" alt="写真２"></li>
+                <li><img src="./img/mainvisual3.jpg" alt="写真３"></li>
             </ul>
         </div>
 
@@ -51,11 +52,9 @@
     <script>
         function toggle() {
             document.querySelector(".menuBtn").classList.toggle('open');
-        }
-
-        function toggle() {
             document.querySelector("#navi").classList.toggle('active');
         }
+
     </script>
 </body>
 </html>
