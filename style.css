@@ -215,7 +215,7 @@ MAINVISUAL
 }
 
 /* --フェード画像-- */
-.fade li{
+.fade li {
     position: absolute;
     top: 0;
     right: 0;
@@ -291,7 +291,7 @@ MAINVISUAL
 /*-------------------------------------------------------
 レスポンシブ
 ---------------------------------------------------------*/
-@media (max-width: 600px) {
+@media (max-width: 900px) {
 
 /*----------------------------------
 HEADER
@@ -307,8 +307,17 @@ HEADER
 
     .menuBtn i {
         width: 35px;
-        height: 1.5px;
+        height: 2.5px;
     }
+
+    .menuBtn i:first-child {
+        top: 26px;
+    }
+
+    .menuBtn i:last-child {
+        top: 49px;
+    }
+
 /* --クリック時に表示するメニュー-- */
     #navi .logo {
         top: 25px;
@@ -327,6 +336,24 @@ HEADER
 MAINVISUAL
 ------------------------------------*/
 /* --テキスト-- */
+.text {
+    top: 310px;
+    left: 15px;
+}
 
+.title {
+    font-size: 1.75rem;
+    margin-bottom: 10px;
+}
 
+.text .btn {
+    width: 100%;
+}
+/* --フェード画像-- */
+.fade li {
+    width: 100%;
+}
+
+.fade img {
+    height: 300px;
 }
