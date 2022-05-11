@@ -147,17 +147,17 @@ HEADER
 /* --クリック-- */
 .menuBtn.open i:first-child {
     top: 50%;
-    transform: translate(-50%,-50%)rotate(-45deg);
+    transform: translate(-50%,-50%);rotate(-45deg);
 }
 
 .menuBtn.open i:nth-child(2) {
-    transform: translate(-50%,-50%)rotate(45deg);
+    transform: translate(-50%,-50%);rotate(45deg);
     opacity: 0;
 }
 
 .menuBtn.open i:last-child {
     top: 50%;
-    transform: translate(-50%,-50%)rotate(45deg);
+    transform: translate(-50%,-50%);rotate(45deg);
 }
 /*----------------------------------
 MAINVISUAL
@@ -307,7 +307,7 @@ HEADER
 
     .menuBtn i {
         width: 35px;
-        height: 2.5px;
+        height: 2px;
     }
 
     .menuBtn i:first-child {
@@ -337,6 +337,7 @@ MAINVISUAL
 ------------------------------------*/
 /* --テキスト-- */
 .text {
+    width: calc(100% - 30px);
     top: 310px;
     left: 15px;
 }
