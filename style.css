@@ -23,6 +23,11 @@ img {
 li {
     list-style: none;
 }
+
+.wrapper {
+    max-width: 860px;
+    margin: 0 auto;
+}
 /*----------------------------------
 HEADER
 ------------------------------------*/
@@ -147,17 +152,17 @@ HEADER
 /* --クリック-- */
 .menuBtn.open i:first-child {
     top: 50%;
-    transform: translate(-50%,-50%);rotate(-45deg);
+    transform: translate(-50%,-50%)rotate(-45deg);
 }
 
 .menuBtn.open i:nth-child(2) {
-    transform: translate(-50%,-50%);rotate(45deg);
+    transform: translate(-50%,-50%)rotate(45deg);
     opacity: 0;
 }
 
 .menuBtn.open i:last-child {
     top: 50%;
-    transform: translate(-50%,-50%);rotate(45deg);
+    transform: translate(-50%,-50%)rotate(45deg);
 }
 /*----------------------------------
 MAINVISUAL
@@ -175,7 +180,8 @@ MAINVISUAL
     left: 10%;
     z-index: 10;
 }
-.title {
+
+.text .title {
     font-size: 46px;
     font-weight: bold;
     text-shadow: 0 4px 6px#fff;
@@ -273,6 +279,279 @@ MAINVISUAL
     }
 }
 
+/*----------------------------------
+SEASON
+------------------------------------*/
+#reason {
+    margin-bottom: 120px;
+}
+
+.sec-title {
+    text-align: center;
+    position: relative;
+    font-size: 2.25rem;
+    margin-bottom: 100px;
+}
+
+.sec-title::after {
+    content: "";
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -20px;
+    margin: 0 auto;
+    border-bottom: 3px solid #000;
+}
+
+.sec-container {
+    background-color: #ff2a2a;
+    padding: 80px 0;
+}
+
+/* --共通スライド-- */
+.slide {
+    display: flex;
+    background-color: #fff;
+    width: 50%;
+    padding: 50px 100px;
+    align-items: center;
+    justify-content: center;
+    /* opacity: 0; */
+}
+
+.slide img {
+    width: auto;
+    height: 60px;
+    margin-right: 20px;
+}
+
+.reason-title {
+    display: block;
+    font-size: 28px;
+    color: #ff2a2a;
+    font-weight: bold;
+}
+
+.reason-text {
+    display: block;
+    font-size: 18px;
+}
+
+/* --左スライド-- */
+.slide-left {
+    
+}
+
+.slide-left-shape {
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    margin-bottom: 40px;
+}
+
+/* --右スライド-- */
+.slide-right {
+
+}
+
+.slide-right-shape {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    margin: 0 0 0 auto;
+}   
+
+/*----------------------------------
+VOICE
+------------------------------------*/
+#voice {
+    margin-bottom: 120px;
+}
+
+.student-voice {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 60px;
+    /* opacity: 0; */
+}
+
+.student-voice:last-child {
+    margin-bottom: 0;
+}
+
+.item-right {
+    justify-content: flex-end;
+}
+
+/* --生徒-- */
+.student img {
+    width: 120px;
+    background-color: rgb(193, 193, 193);
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.name {
+    font-size: 12px;
+    text-align: center;
+}
+/* --吹き出し-- */
+.balloon-text {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    background: #e9f1fb;
+    border-radius: 15px;
+    padding: 20px;
+    position: relative;
+}
+
+/* --左吹き出し-- */
+.item-left .balloon-text {
+    margin-left: 15px;
+}
+
+.item-left .balloon-text::before {
+    content: "";
+    position: absolute;
+    top: 60%;
+    left: 0;
+    margin-left: -30px;
+    border: 15px solid transparent;
+    border-right: 15px solid #e9f1fb;
+}
+
+/* --右吹き出し-- */
+.item-right .balloon-text {
+    margin-right: 15px;
+}
+
+.item-right .balloon-text::before {
+    content: "";
+    position: absolute;
+    top: 60%;
+    right: 0;
+    margin-right: -30px;
+    border: 15px solid transparent;
+    border-left: 15px solid #e9f1fb
+}
+
+/*----------------------------------
+SUMMARY
+------------------------------------*/
+#summary {
+    margin-bottom: 120px;
+    background-image: url(./img/bg.gif);
+    background-repeat: repeat;
+    padding: 60px 0;
+}
+
+.summary-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.summary-menu li {
+    width: 48%;
+    background:#fff;
+    border-radius: 20px;
+    padding: 60px;
+    margin-bottom: 32px;
+}
+
+.summary-menu li:nth-child(n + 3) {
+    margin-bottom: 0;
+}
+/* --4つのボックス中身-- */
+.summary-menu-title {
+    text-align: center;
+}
+
+.ja {
+    font-size: 1.75rem;
+    display: block;
+    margin-bottom: 7px;
+}
+
+.en {
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/*----------------------------------
+ENTRY
+------------------------------------*/
+#entry {
+    text-align: center;
+    margin-bottom: 120px;
+}
+
+#entry  .title {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.catchphrase {
+    font-size: 1.125rem;
+    margin-bottom: 40px;
+}
+
+#entry .btn {
+    display: block;
+    font-size: 1.725rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #ff2a2a;
+    border: 3px solid#ff2a2a;
+    padding: 15px 20px;
+    border-radius: 50px;
+    transition: .3s;
+}
+
+#entry .btn:hover {
+    color: #ff2a2a;
+    background-color: #fff;
+}
+
+/*----------------------------------
+FOOTER
+------------------------------------*/
+#footer {
+    background: #eaeaea;
+    padding: 60px 0 20px 0;
+}
+
+.inner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.inner > li {
+    width: 25%;
+}
+
+.inner .title {
+    font-weight: bold;
+}
+
+.footer-menu {
+    padding: 10px 0 0 10px;
+}
+
+.footer-menu li {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+/* --コピーライト-- */
+.copyright {
+    font-size: 10px;
+    text-align: center;
+}
 
 
 
@@ -292,6 +571,10 @@ MAINVISUAL
 レスポンシブ
 ---------------------------------------------------------*/
 @media (max-width: 900px) {
+
+.wrapper {
+    padding: 0 16px;
+}
 
 /*----------------------------------
 HEADER
@@ -335,26 +618,150 @@ HEADER
 /*----------------------------------
 MAINVISUAL
 ------------------------------------*/
-/* --テキスト-- */
-.text {
-    width: calc(100% - 30px);
-    top: 310px;
-    left: 15px;
-}
+    #mainvisual {
+        height: 490px;
+        margin-bottom: 80px;
+    }
+    /* --テキスト-- */
+    #mainvisual .text {
+        width: calc(100% - 30px);
+        top: 310px;
+        left: 15px;
+    }
 
-.title {
-    font-size: 1.75rem;
-    margin-bottom: 10px;
-}
+    #mainvisual .text .title {
+        font-size: 1.75rem;
+        margin-bottom: 10px;
+    }
 
-.text .btn {
-    width: 100%;
-}
-/* --フェード画像-- */
-.fade li {
-    width: 100%;
-}
+    .text .btn {
+        width: 100%;
+    }
+    /* --フェード画像-- */
+    .fade li {
+        width: 100%;
+    }
 
-.fade img {
-    height: 300px;
+    .fade img {
+        height: 300px;
+    }
+
+/*----------------------------------
+REASON
+------------------------------------*/
+    .sec-title {
+        font-size: 1.75rem;
+        margin-bottom: 60px;
+    }
+
+    .sec-title::after {
+        width: 80px;
+    }
+
+    .sec-container {
+        padding: 40px 0;
+    }
+    /* --共通スライド-- */
+    .slide {
+    width: 97%;
+    }
+
+    .slide img {
+        margin-right: 30px;
+    }
+
+/*----------------------------------
+VOICE
+------------------------------------*/
+    #voice {
+        margin-bottom: 80px;
+    }
+
+    .item-left {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .item-right {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* --生徒-- */
+    .student img {
+        margin-top: 20px;
+    }
+
+    /* --吹き出し-- */
+    .balloon-text {
+        width: 100%;
+    }
+
+    .item-left .balloon-text::before,
+    .item-right .balloon-text::before {
+        top: 100%;
+        border: 15px solid transparent;
+        border-top: 15px solid #e9f1fb;
+    }
+
+    /* --左吹き出し-- */
+    .item-left .balloon-text {
+        margin-left: 0px;
+    }
+
+    .item-left .balloon-text::before {
+        margin-left: calc(50% - 15px);
+    }
+
+    /* --右吹き出し-- */
+    .item-right .balloon-text {
+        margin-right: 0px;
+    }
+
+    .item-right .balloon-text::before {
+        margin-right: calc(50% - 15px);
+    }
+
+/*----------------------------------
+SUMMARY
+------------------------------------*/
+    .summary-menu {
+        flex-direction: column;
+    }
+
+    .summary-menu li {
+        width: 100%;
+        padding: 25px;
+    }
+
+    .en {
+        font-size: 16px;
+    }
+
+    .summary-menu li:nth-child(n + 3) {
+        margin-bottom: 32px;
+    }
+
+    .summary-menu li:last-child {
+        margin-bottom: 0;
+    }
+
+/*----------------------------------
+FOOTER
+------------------------------------*/
+    #footer .inner {
+        flex-wrap: wrap;
+    }
+
+    .inner li {
+        width: 50%;
+    }
+
+    .inner > li:nth-child(1) {
+        margin-bottom: 32px;
+    }
+
+    .inner > li:nth-child(2) {
+        margin-bottom: 32px;
+    }
 }
